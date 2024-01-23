@@ -25,3 +25,8 @@ Creare dei bottoni con le azioni massive (tutti fatti, tutti da fare, elimina tu
 Creare un filtro di ricerca in tempo reale
 */
 
+const {createApp} = Vue;
+
+const app= createApp ({});
+
+app.mount('#root')
