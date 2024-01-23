@@ -1,10 +1,3 @@
-/*
-SUPER BONUS
-- Creare dei bottoni con le azioni massive (tutti fatti, tutti da fare, elimina tutti)
-
-- Creare un filtro di ricerca in tempo reale
-*/
-
 const {createApp} = Vue;
 
 const app= createApp ({
@@ -47,6 +40,19 @@ const app= createApp ({
             this.tasks.push(newTask)
 
             this.newTaskText = ""
+        },
+        setAllDone(){
+            this.tasks.forEach(task => {
+                task.done = true;
+            })
+        },
+        setAllToDo(){
+            this.tasks.forEach(task => {
+                task.done = false;
+            })
+        },
+        deleteAllTasks(){
+            this.tasks = []
         }
     }
 });

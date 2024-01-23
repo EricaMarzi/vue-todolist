@@ -47,7 +47,7 @@
                             <span :class="{'crossed-out': task.done}">{{task.text}}</span>
                         </div>
                         <!--Remove task-->
-                        <i class="fa-solid fa-trash text-gray pointer" type="button" @click="removeTask(task.id)"></i>
+                        <i class="fa-solid fa-trash text-gray pointer hover" type="button" @click="removeTask(task.id)"></i>
                     </li>
                 </ul>
                 <!--Add Task-->
@@ -56,6 +56,12 @@
                     <span class="input-group-text pointer" @click="addTask">
                         <i class="fa-solid fa-plus"></i>
                     </span>
+                  </div>
+                <!--Massive Button-->
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-primary" @click="setAllDone">All done</button>
+                    <button type="button" class="btn btn-outline-secondary" @click="setAllToDo">All to do</button>
+                    <button type="button" class="btn btn-outline-danger" @click="deleteAllTasks">Delete</button>
                   </div>
             </section>
 
