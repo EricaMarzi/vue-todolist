@@ -24,7 +24,8 @@ const app= createApp ({
                 { id: 2, done: true, text: 'Lavare i capelli' },
                 { id: 3, done: false, text: 'Comprare una marca da bollo' },
                 { id: 4, done: false, text: 'Aggiornare il PC' }
-                ]
+                ],
+            newTaskText: ""
         }
     },
 
@@ -34,6 +35,14 @@ const app= createApp ({
                 if(id !== task.id) return true
                 else return false
             })
+        }, 
+        addTask() {
+            const newTask = {
+                id: new Date().toISOString(),
+                done: false,
+                text: this.newTaskText
+            }
+            this.tasks.push(newTask)
         }
     }
 });

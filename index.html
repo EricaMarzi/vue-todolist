@@ -51,8 +51,8 @@
                 </ul>
                 <!--Add Task-->
                 <div class="input-group my-3">
-                    <input type="text" class="form-control" placeholder="Aggiungi Task">
-                    <span class="input-group-text pointer">
+                    <input v-model="newTaskText" type="text" class="form-control" placeholder="Aggiungi Task">
+                    <span class="input-group-text pointer" @click="addTask">
                         <i class="fa-solid fa-plus"></i>
                     </span>
                   </div>
