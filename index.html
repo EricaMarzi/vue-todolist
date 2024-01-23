@@ -51,7 +51,7 @@
                 </ul>
                 <!--Add Task-->
                 <div class="input-group my-3">
-                    <input v-model="newTaskText" type="text" class="form-control" placeholder="Aggiungi Task">
+                    <input v-model="newTaskText" type="text" class="form-control" placeholder="Aggiungi Task" @keyup.enter="addTask">
                     <span class="input-group-text pointer" @click="addTask">
                         <i class="fa-solid fa-plus"></i>
                     </span>
