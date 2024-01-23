@@ -1,12 +1,4 @@
 /*
-Descrizione:
-Rifare l'esercizio della to do list. Ecco l'array di oggetti da utilizzare:
-[
-{ id: 1, done: false, text: 'Fare la spesa' },
-{ id: 2, done: true, text: 'Lavare i capelli' },
-{ id: 3, done: false, text: 'Comprare una marca da bollo' },
-{ id: 4, done: false, text: 'Aggiornare il PC' }
-]
 
 MILESTONE 1
 Stampare all'interno di una lista HTML un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.

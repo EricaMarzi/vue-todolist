@@ -12,6 +12,11 @@
 .text-gray {
     color: #3d4347;
 }
+
+.crossed-out{
+ text-decoration:line-through;
+}
+
 /*& -------*/
 
 .list.container {
