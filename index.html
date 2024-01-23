@@ -39,6 +39,7 @@
                     </span>
                   </div>
                 <!--List-->
+                <h3 class="text-gray" v-show="!tasks.length">Non ci sono task</h3>
                 <ul class="list-group">
                     <li v-for="task in tasks" class="list-group-item d-flex justify-content-between align-items-center">
                         <div>
