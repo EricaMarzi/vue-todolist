@@ -58,7 +58,7 @@
                     </span>
                   </div>
                 <!--Massive Button-->
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <div v-show="filteredTasks.length" class="btn-group" role="group" aria-label="Basic outlined example">
                     <button type="button" class="btn btn-outline-primary" @click="setAllDone">All done</button>
                     <button type="button" class="btn btn-outline-secondary" @click="setAllToDo">All to do</button>
                     <button type="button" class="btn btn-outline-danger" @click="deleteAllTasks">Delete</button>
