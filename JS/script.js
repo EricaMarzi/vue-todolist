@@ -1,12 +1,8 @@
 /*
-
-
-Bonus:
-
-Mostrare una scritta "non ci sono task" se abbiamo cancellato tutti i task
 SUPER BONUS
-Creare dei bottoni con le azioni massive (tutti fatti, tutti da fare, elimina tutti)
-Creare un filtro di ricerca in tempo reale
+- Creare dei bottoni con le azioni massive (tutti fatti, tutti da fare, elimina tutti)
+
+- Creare un filtro di ricerca in tempo reale
 */
 
 const {createApp} = Vue;
@@ -20,7 +16,18 @@ const app= createApp ({
                 { id: 3, done: false, text: 'Comprare una marca da bollo' },
                 { id: 4, done: false, text: 'Aggiornare il PC' }
                 ],
-            newTaskText: ""
+            newTaskText: "",
+            searchText: ""
+        }
+    },
+
+    computed: {
+        filteredTasks(){
+            const searchTerm =this.searchText.toLowerCase()
+            return this.tasks.filter(task => {
+                if (task.text.toLowerCase().includes(searchTerm))return true
+                else return false
+            })
         }
     },
 
@@ -38,6 +45,8 @@ const app= createApp ({
                 text: this.newTaskText
             }
             this.tasks.push(newTask)
+
+            this.newTaskText = ""
         }
     }
 });

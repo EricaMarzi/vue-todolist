@@ -33,7 +33,7 @@
                 <h3 class="text-gray">To Do</h3>
                 <!--Search Task-->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Cerca...">
+                    <input v-model.trim="searchText" type="text" class="form-control" placeholder="Cerca...">
                     <span class="input-group-text pointer">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
@@ -41,7 +41,7 @@
                 <!--List-->
                 <h3 class="text-gray" v-show="!tasks.length">Non ci sono task</h3>
                 <ul class="list-group">
-                    <li v-for="task in tasks" class="list-group-item d-flex justify-content-between align-items-center">
+                    <li v-for="task in filteredTasks" class="list-group-item d-flex justify-content-between align-items-center">
                         <div>
                             <input v-model="task.done" type="checkbox" class="form-check-input me-2">
                             <span :class="{'crossed-out': task.done}">{{task.text}}</span>
@@ -52,7 +52,7 @@
                 </ul>
                 <!--Add Task-->
                 <div class="input-group my-3">
-                    <input v-model="newTaskText" type="text" class="form-control" placeholder="Aggiungi Task" @keyup.enter="addTask">
+                    <input v-model.trim="newTaskText" type="text" class="form-control" placeholder="Aggiungi Task" @keyup.enter="addTask">
                     <span class="input-group-text pointer" @click="addTask">
                         <i class="fa-solid fa-plus"></i>
                     </span>
