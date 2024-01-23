@@ -46,7 +46,7 @@
                             <span :class="{'crossed-out': task.done}">{{task.text}}</span>
                         </div>
                         <!--Remove task-->
-                        <i class="fa-solid fa-trash text-gray pointer"></i>
+                        <i class="fa-solid fa-trash text-gray pointer" type="button" @click="removeTask(task.id)"></i>
                     </li>
                 </ul>
                 <!--Add Task-->

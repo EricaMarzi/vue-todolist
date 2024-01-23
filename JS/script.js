@@ -1,8 +1,5 @@
 /*
 
-MILESTONE 1
-Stampare all'interno di una lista HTML un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
-
 MILESTONE 2
 Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
 
@@ -28,6 +25,15 @@ const app= createApp ({
                 { id: 3, done: false, text: 'Comprare una marca da bollo' },
                 { id: 4, done: false, text: 'Aggiornare il PC' }
                 ]
+        }
+    },
+
+    methods: {
+        removeTask(id) {
+            this.tasks = this.tasks.filter((task) => {
+                if(id !== task.id) return true
+                else return false
+            })
         }
     }
 });
